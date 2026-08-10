@@ -153,7 +153,7 @@
     <section class="bg-[#cde5ff] py-10">
       <article data-aos="fade-up" id="caracteristicas"
         class="w-11/12 mx-auto px-6 py-10 bg-[url('./assets/img/background.png')] rounded-3xl text-[#f4f4f5]">
-        <h2 class="text-3xl font-bold text-center mb-12">Todo lo que necesitas para tu bienestar mental</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">Todo lo que necesitas para tu bienestar mental</h2>
         <p class="w-2/3 mx-auto text-center">Descubre herramientas simples pero poderosas para cultivar una mentalidad
           positiva.</p>
       </article>
@@ -265,27 +265,66 @@
       </article>
     </section>
 
-    <!--Prhases moment-->
+    <!--Phrases moment-->
     <section class="py-20">
-      <h2>Frase del momento</h2>
-      <p>Encuentra inspiración instantánea.</p>
-      <article>
-        <span></span>
-        <p></p>
+      <div class="text-center">
+        <h2 class="text-4xl font-bold text-center mb-2">Frase del momento</h2>
+        <p class="w-2/3 mx-auto text-center text-[#191c1e]">Encuentra inspiración instantánea.</p>
+      </div>
+      <article class="bg-[url('./assets/img/background.png')] text-white text-center w-2/3 p-10 rounded-xl shadow-2xl bg-[#f2f4f6] mt-10 mx-auto border border-[#1d695f]/30">
+        <p class="text-4xl italic font-semibold" id="phrase"></p>
+        <span class="text-xl font-semibold mt-10 block" id="category"></span>
       </article>
     </section>
 
+    <!--Blog-->
+    <section></section>
 
-    <!-- Contacto -->
-    <section data-aos="fade-up" id="participa"
-      class="w-11/12 container mx-auto px-6 py-16 bg-[url('img/Background.png')] rounded-3xl shadow-2xl">
+    <!--Comunity Blog-->
+    <section>
 
-      <h2 class="text-3xl font-bold text-[#2474ce] mb-8 text-center animate__animated animate__fadeIn text-[#f4f4f5]">
-        Participa con nosotros</h2>
-      <p class="mx-auto w-1/2n text-center pb-8 text-[#f4f4f5]">¿Quieres que una de tus frases aparezcan en nuesta app?
-        <br> Contactanos y mandanos tu frase para mostrarla a todo mundo</p>
-      <form action="https://formsubmit.co/oficial@fraseo.site" method="POST"
-        class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6 animate__animated animate__fadeInUp">
+    </section>
+
+    <!--Wellness Tips-->
+    <section data-aos="fade-up" class="py-20">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold mb-2">Preguntas frecuentas</h2>
+        <p class="w-2/3 mx-auto text-[#191c1e]">Resolvemos tus dudas principales sobre Fraseo.</p>
+      </div>
+      <article class="mx-auto flex flex-col w-11/12 justify-center items-center gap-8 pt-10">
+        <details class="w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30">
+          <summary class="cursor-pointer">¿Es la aplicación gratuita?</summary>
+          <p class="mt-4 cursor-default">Sí, Fraseo ofrece una versión básica completamente gratuita que incluye una frase diaria. También contamos con una suscripción premium para acceder a funciones adicionales como categorías ilimitadas y personalización de temas.</p>
+        </details>
+        <details class="w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30 cursor-pointer">
+          <summary class="cursor-pointer">¿Puedo compartir las frases en mis redes sociales?</summary>
+          <p class="mt-4 cursor-default">¡Por supuesto! Cada frase tiene un botón de compartir integrado. Puedes exportarlas como imágenes personalizadas directamente a Instagram Stories, WhatsApp, Twitter, o guardarlas en tu galería.</p>
+        </details>
+        <details class="w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30 cursor-pointer">
+          <summary class="cursor-pointer">¿Necesito conexión a internet para ver las frases?</summary>
+          <p class="mt-4 cursor-default">La aplicación descarga automáticamente las frases de los próximos días cuando estás conectado, por lo que podrás leer tu frase diaria incluso si te encuentras sin conexión a internet en ese momento.</p>
+        </details>
+      <!-- <details class="w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30 cursor-pointer">
+          <summary class="cursor-pointer">¿Cómo configuro las notificaciones diarias?</summary>
+          <p class="mt-4 cursor-default">Puedes configurar la hora exacta en la que deseas recibir tu frase diaria desde la sección de "Ajustes" dentro de la aplicación, bajo el menú de "Notificaciones".</p>
+        </details>--> 
+      </article>
+    </section>
+
+    <!--Frequently Asked Questions-->
+    <section>
+
+    </section>
+
+
+    <!-- Form Contact -->
+    <section data-aos="fade-up" id="participa" class="w-11/12 container mx-auto px-6 py-16 ">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold mb-2">¿Tienes alguna pregunta?</h2>
+        <p class="w-2/3 mx-auto text-[#191c1e]">Nos encantaría escucharte. Escríbenos y te responderemos lo antes posible.</p>
+      </div>
+
+      <form action="https://formsubmit.co/oficial@fraseo.site" method="POST" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6 animate__animated animate__fadeInUp">
         <div>
           <label for="email" class="block text-left font-semibold mb-2">Correo electrónico</label>
           <input type="email" id="email" name="email" required
@@ -364,6 +403,7 @@
     });
   </script>
   <script src="main.js"></script>
+  <script src="js/getPrhases.js"></script>
 
 
 </body>
