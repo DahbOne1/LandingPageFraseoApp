@@ -324,35 +324,28 @@
         <p class="w-2/3 mx-auto text-[#191c1e]">Nos encantaría escucharte. Escríbenos y te responderemos lo antes posible.</p>
       </div>
 
-      <form action="https://formsubmit.co/oficial@fraseo.site" method="POST" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6 animate__animated animate__fadeInUp">
+      <form action="https://formsubmit.co/oficial@fraseo.site" method="POST" class="max-w-3xl mx-auto bg-[#f2f4f6] p-8 rounded-2xl border border-[#1d695f]/30 shadow-lg space-y-6 mt-8">
+        <section class="flex justify-between gap-10">
+          <div class="w-1/2">
+            <label for="email" class="block w-full text-left font-semibold mb-2">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com"
+              class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2474ce]">
+          </div>
+          <div class="w-1/2">
+            <label for="categoria" class="block text-left font-semibold mb-2">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="tu nombre"
+              class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2474ce]">
+          </div>
+        </section>
         <div>
-          <label for="email" class="block text-left font-semibold mb-2">Correo electrónico</label>
-          <input type="email" id="email" name="email" required
-            class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2474ce]">
-        </div>
-        <div>
-          <label for="categoria" class="block text-left font-semibold mb-2">Categoria</label>
-          <select id="categoria" name="categoria" required
-            class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2474ce]">
-            <option value="disciplina">Disciplina</option>
-            <option value="amistad" selected>Amistad</option>
-            <option value="amor">Amor</option>
-            <option value="sabiduria">Sabiduria</option>
-            <option value="gratitud" selected>Gratitud</option>
-            <option value="autoestima">Autoestima</option>
-            <option value="resiliencia" selected>Resiliencia</option>
-            <option value="tolerancia">Tolerancia</option>
-          </select>
-        </div>
-        <div>
-          <label for="frase" class="block text-left font-semibold mb-2">Frase</label>
-          <textarea id="frase" name="frase" rows="4" required
+          <label for="mensaje" class="block text-left font-semibold mb-2">Mensjae</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"
             class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2474ce]"></textarea>
         </div>
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://yourdomain.co/gracias.html">
+        <input type="hidden" name="_next" value="https://fraseo.site/thanks.html">
         <button type="submit"
-          class="bg-[#62c791] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-500 transition mx-auto">Enviar</button>
+          class="bg-[#0b3e81] font-semibold w-full block text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#002245] transition mx-auto">Enviar</button>
       </form>
     </section>
 
@@ -403,7 +396,7 @@
     });
   </script>
   <script src="main.js"></script>
-  <script src="js/getPrhases.js"></script>
+  <script src="js/get-phrases.js"></script>
 
 
 </body>

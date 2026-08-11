@@ -1,7 +1,7 @@
 async function cargarFraseDiaria() {
   try {
     // 1. Obtener el archivo JSON
-    const respuesta = await fetch('./assets/bd/bd.json');
+    const respuesta = await fetch('./assets/data/bd.json');
     
     // Validar que la petición fue exitosa
     if (!respuesta.ok) {
