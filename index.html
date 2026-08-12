@@ -19,18 +19,6 @@
 </head>
 
 <body class="text-[#0b3e81]">
-  <!-- Modal -->
-  <div id="modalResultados" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-    <div class="bg-white w-11/12 md:w-1/2 rounded-lg shadow-lg p-6">
-      <div class="flex justify-between items-center border-b pb-3">
-        <h3 class="text-xl font-semibold text-[#0b3e81]">Resultados de búsqueda</h3>
-        <button id="cerrarModal" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
-      </div>
-      <div id="contenedorResultados" class="mt-4 max-h-64 overflow-y-auto space-y-2">
-        <!-- Aquí se cargan los resultados -->
-      </div>
-    </div>
-  </div>
 
   <!-- Navbar -->
   <header class="w-full p-4 bg-[#F8FAFC] drop-shadow-md rounded-xl">
@@ -204,7 +192,7 @@
 
     <!--Users's Opinion-->
     <section class="py-20 bg-[#cde5ff]">
-      <div class="text-center">
+      <div class="text-center px-5">
         <h2 class="font-bold text-4xl text-[#003366]">Lo que dicen nuestros usuarios</h2>
         <p class="mt-5 text-lg text-[#191c1e]">Únete a las personas que ya están mejorando su mentalidad diaria.</p>
       </div>
@@ -272,7 +260,7 @@
         <p class="w-2/3 mx-auto text-center text-[#191c1e]">Encuentra inspiración instantánea.</p>
       </div>
       <article class="bg-[url('./assets/img/background.png')] text-white text-center w-11/12 lg:w-2/3 p-10 rounded-xl shadow-2xl bg-[#f2f4f6] mt-10 mx-auto border border-[#1d695f]/30">
-        <p class="text-4xl italic font-semibold" id="phrase"></p>
+        <p class="text-3xl  md:text-4xl italic font-semibold" id="phrase"></p>
         <span class="text-xl font-semibold mt-10 block" id="category"></span>
       </article>
     </section>
@@ -287,14 +275,15 @@
 
     <!--Wellness Tips-->
     <section data-aos="fade-up" class="py-20">
-      <div class="text-center">
+      <div class="text-center px-5">
         <h2 class="text-4xl font-bold mb-2">Preguntas frecuentas</h2>
         <p class="w-2/3 mx-auto text-[#191c1e]">Resolvemos tus dudas principales sobre Fraseo.</p>
       </div>
       <article class="mx-auto flex flex-col w-11/12 justify-center items-center gap-8 pt-10">
         <details class="w-11/12 lg:w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30">
           <summary class="cursor-pointer">¿Es la aplicación gratuita?</summary>
-          <p class="mt-4 cursor-default">Sí, Fraseo ofrece una versión básica completamente gratuita que incluye una frase diaria. También contamos con una suscripción premium para acceder a funciones adicionales como categorías ilimitadas y personalización de temas.</p>
+          <p class="mt-4 cursor-default">Sí, Fraseo ofrece una versión básica completamente gratuita que incluye una frase diaria.</p>
+          <!-- También contamos con una suscripción premium para acceder a funciones adicionales como categorías ilimitadas y personalización de temas.-->
         </details>
         <details class="w-11/12 lg:w-3/5 rounded-xl bg-[#f2f4f6] p-4 shadow-xl border border-[#1d695f]/30 cursor-pointer">
           <summary class="cursor-pointer">¿Puedo compartir las frases en mis redes sociales?</summary>
@@ -348,7 +337,16 @@
           class="bg-[#0b3e81] font-semibold w-full block text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#002245] transition mx-auto">Enviar</button>
       </form>
     </section>
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 hidden">
+      <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 max-h-[90vh] overflow-y-auto">
+        <div id="modal-content"></div>
+        <button id="close-modal" class="mt-6 w-full py-2 px-4 bg-[#0b3e81] text-white rounded-lg hover:bg-[#002245]  transition-colors">
+          Cerrar
+        </button>
+      </div>
+    </div>
   </main>
+
 
   <!-- Footer -->
   <footer class="flex flex-col gap-5 items-center justify-around bg-[#0b3e81] text-white py-12">
@@ -358,14 +356,15 @@
     </div>
     <nav>
       <ul class="flex gap-5">
-        <li><a href="" class="hover:text-white/50 transtition-all duration-150">Privacidad</a></li>
-        <li><a href="">Términos</a></li>
-        <li><a href="">Compartir</a></li>
+        <li><button id="btn-aviso" class="hover:text-white/50 transtition-all duration-150">Privacidad</button></li>
+        <li><button id="btn-terminos" class="hover:text-white/50 transtition-all duration-150">Términos</button></li>
+        <li><button class="hover:text-white/50 transtition-all duration-150">Compartir</button></li>
       </ul>
     </nav>
     <div class="text-center  text-sm">
       © 2026 Fraseo - Todos los derechos reservados.
     </div>
+    
   </footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -377,6 +376,7 @@
   </script>
   <script src="main.js"></script>
   <script src="js/get-phrases.js"></script>
+  <script src="js/open-modal.js"></script>
 
 
 </body>
